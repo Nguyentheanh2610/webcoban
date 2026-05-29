@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenFarm – Giới thiệu</title>
+<!-- # PAGE: about.html - Trang giới thiệu công ty và giá trị -->
+<!-- Liên kết font chữ và stylesheet cho trang giới thiệu -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+<!-- Thân trang chứa header, nội dung chính và footer -->
+<header style="position:relative">
+  <div class="logo"><a href="home.html" class="logo-link"><span>🌿</span>GreenFarm</a></div>
+  <nav> <!-- # NAV: menu điều hướng sang các trang khác -->
+    <a class="nb" href="home.html">Trang chủ</a>
+    <a class="nb on" href="about.html">Giới thiệu</a>
+    <a class="nb" href="products.html">Sản phẩm</a>
+    <a class="nb" href="contact.html">Liên hệ</a>
+    <button class="cb" id="ct">🛒 Giỏ hàng <span class="badge" id="cc">0</span></button>
+  </nav>
+  <div class="cp" id="cpanel">
+    <div class="cp-head">Giỏ hàng của bạn</div>
+    <div id="citems"><div class="ce">Giỏ hàng trống</div></div>
+    <div class="cf"><span id="ctot" style="font-size:12px;color:#999">0 sản phẩm</span><button class="clr" id="clrbtn">Xóa tất cả</button></div>
+  </div>
+</header>
+<div class="toast" id="toast"></div>
+<!-- # MAIN CONTENT: bố cục giới thiệu công ty, cam kết và câu chuyện thương hiệu -->
+
+<!-- START PAGE: about -->
+<div class="page" id="page-about" data-page="about">
+  <div class="ph"><h1>Về GreenFarm</h1><p>Từ đất đỏ Đắk Lắk đến bàn ăn của bạn</p></div>
+  <div class="ab2">
+    <div class="ablk"><h3>Câu chuyện của chúng tôi</h3><p>Thành lập năm 2018 bởi những người nông dân yêu nghề tại Đắk Lắk. Chúng tôi áp dụng canh tác hữu cơ, không hóa chất, phục vụ hàng nghìn gia đình với sản phẩm tươi ngon, truy xuất nguồn gốc minh bạch.</p></div>
+<div class="ablk"><h3>Giá trị cốt lõi</h3><ul class="vl"><li><div class="vd"></div><div><b style="font-weight:500">Tươi sạch</b> — Thu hoạch và giao trong ngày</div></li><li><div class="vd"></div><div><b style="font-weight:500">Hữu cơ</b> — Không thuốc, không chất bảo quản</div></li><li><div class="vd"></div><div><b style="font-weight:500">Minh bạch</b> — Truy xuất nguồn gốc từng nông trại</div></li><li><div class="vd"></div><div><b style="font-weight:500">Bền vững</b> — Canh tác bảo vệ đất và môi trường</div></li></ul></div>
+    <div class="ablk"><h3>Số liệu ấn tượng</h3><div class="sg"><div class="sc"><div class="sn">50+</div><div class="sl">Nông trại hợp tác</div></div><div class="sc"><div class="sn">5.000+</div><div class="sl">Khách hàng tin dùng</div></div><div class="sc"><div class="sn">20+</div><div class="sl">Loại sản phẩm</div></div><div class="sc"><div class="sn">6</div><div class="sl">Năm kinh nghiệm</div></div></div></div>
+    <div class="ablk"><h3>Quy trình canh tác</h3><p>Mỗi sản phẩm qua kiểm định nghiêm ngặt từ chọn giống, chăm sóc, thu hoạch đến đóng gói. Cam kết đạt chuẩn <b style="font-weight:500;color:var(--g)">VietGAP</b> và <b style="font-weight:500;color:var(--g)">GlobalGAP</b>.</p></div>
+  </div>
+  <div class="bnr"><div><h2>Sẵn sàng đặt hàng?</h2><p>Khám phá sản phẩm tươi sạch từ GreenFarm.</p></div><a class="btnw" href="products.html">Xem sản phẩm →</a></div>
+  <!-- # FOOTER: thông tin bản quyền và kết thúc trang -->
+  <footer>© 2025 GreenFarm – Bơ sáp & nông sản sạch</footer>
+</div>
+<!-- END PAGE: about -->
+
+<script src="js/main.js"></script>
+</body>
+</html>

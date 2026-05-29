@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenFarm – Bơ Sáp & Nông Sản Sạch</title>
+  <!-- PAGE: bainop.html - phiên bản single-page chứa toàn bộ nội dung trong một file -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <!-- HEADER: khu đầu trang chứa logo, menu điều hướng, giỏ hàng và điều khiển trang -->
+  <header style="position:relative">
+    <div class="logo" onclick="go('home')">
+      <span>🌿</span>GreenFarm
+    </div>
+    <nav>
+      <button class="nb on" id="nav-home" onclick="go('home')">Trang chủ</button>
+      <button class="nb" id="nav-about" onclick="go('about')">Giới thiệu</button>
+      <button class="nb" id="nav-products" onclick="go('products')">Sản phẩm</button>
+      <button class="nb" id="nav-contact" onclick="go('contact')">Liên hệ</button>
+      <button class="cb" id="ct">
+        🛒 Giỏ hàng <span class="badge" id="cc">0</span>
+      </button>
+    </nav>
+    <div class="cp" id="cpanel">
+      <div class="cp-head">Giỏ hàng của bạn</div>
+      <div id="citems">
+        <div class="ce">Giỏ hàng trống</div>
+      </div>
+      <div class="cf">
+        <span id="ctot" style="font-size:12px;color:#999">0 sản phẩm</span>
+        <button class="clr" id="clrbtn">Xóa tất cả</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- HOME PAGE -->
+  <section class="page on" id="page-home" data-page="home">
+    <div class="hero">
+      <div class="hc">
+        <h1>Bơ Sáp & Nông Sản<br>Sạch Đắk Lắk</h1>
+        <p>Tươi ngon từ nông trại đến bàn ăn — thu hoạch mỗi ngày, giao tận nhà.</p>
+        <button class="hcta" onclick="go('products')">Xem sản phẩm →</button>
+      </div>
+    </div>
+
+    <div class="feats">
+      <div class="feat">
+        <div class="fi">🌿</div>
+        <div>
+          <h3>100% hữu cơ</h3>
+          <p>Không thuốc trừ sâu, không chất bảo quản.</p>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="fi">🚚</div>
+        <div>
+          <h3>Giao hàng nhanh</h3>
+          <p>Giao trong ngày tại Đắk Lắk và lân cận.</p>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="fi">✅</div>
+        <div>
+          <h3>Cam kết chất lượng</h3>
+          <p>Hoàn tiền 100% nếu không đạt tiêu chuẩn.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prev">
+      <div class="prev-hd">
+        <h2 class="st">Sản phẩm nổi bật</h2>
+        <button class="sa" onclick="go('products')">Xem tất cả →</button>
+      </div>
+      <div class="g3">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?q=80&w=600&auto=format&fit=crop" alt="Bơ">
+          <div class="cb2">
+            <div class="cn">Bơ Sáp Đắk Lắk</div>
+            <div class="cd">Bơ dẻo, béo, thơm tự nhiên.</div>
+            <div class="cp2">75.000đ/kg</div>
+            <button class="ab" onclick="add('Bơ Sáp Đắk Lắk','75.000đ/kg',1,this,'Thêm vào giỏ')">Thêm vào giỏ</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=600&auto=format&fit=crop" alt="Cam">
+          <div class="cb2">
+            <div class="cn">Cam Hữu Cơ</div>
+            <div class="cd">Trồng tự nhiên, sạch 100%.</div>
+            <div class="cp2">45.000đ/kg</div>
+            <button class="ab" onclick="add('Cam Hữu Cơ','45.000đ/kg',1,this,'Thêm vào giỏ')">Thêm vào giỏ</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=600&auto=format&fit=crop" alt="Rau">
+          <div class="cb2">
+            <div class="cn">Rau Sạch Organic</div>
+            <div class="cd">Thu hoạch mỗi ngày.</div>
+            <div class="cp2">25.000đ/bó</div>
+            <button class="ab" onclick="add('Rau Sạch Organic','25.000đ/bó',1,this,'Thêm vào giỏ')">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="snap">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop" alt="Farm">
+      <div class="snp">
+        <h2 class="st">Về GreenFarm</h2>
+        <p>Chuyên cung cấp bơ sáp và nông sản sạch từ các nông trại uy tín tại Đắk Lắk.</p>
+        <p>Cam kết chất lượng, giao hàng nhanh và an toàn thực phẩm tuyệt đối.</p>
+        <button class="btn" onclick="go('about')">Tìm hiểu thêm →</button>
+      </div>
+    </div>
+
+    <footer>© 2025 GreenFarm – Bơ sáp & nông sản sạch</footer>
+  </section>
+
+  <!-- ABOUT PAGE -->
+  <section class="page" id="page-about" data-page="about">
+    <div class="ph">
+      <h1>Về GreenFarm</h1>
+      <p>Từ đất đỏ Đắk Lắk đến bàn ăn của bạn</p>
+    </div>
+    <div class="ab2">
+      <div class="ablk">
+        <h3>Câu chuyện của chúng tôi</h3>
+        <p>Thành lập năm 2018 bởi những người nông dân yêu nghề tại Đắk Lắk. Chúng tôi áp dụng canh tác hữu cơ, không hóa chất, phục vụ hàng nghìn gia đình với sản phẩm tươi ngon, truy xuất nguồn gốc minh bạch.</p>
+      </div>
+      <div class="ablk">
+        <h3>Giá trị cốt lõi</h3>
+        <ul class="vl">
+          <li>
+            <div class="vd"></div>
+            <div><strong>Tươi sạch</strong> — Thu hoạch và giao trong ngày</div>
+          </li>
+          <li>
+            <div class="vd"></div>
+            <div><strong>Hữu cơ</strong> — Không thuốc, không chất bảo quản</div>
+          </li>
+          <li>
+            <div class="vd"></div>
+            <div><strong>Minh bạch</strong> — Truy xuất nguồn gốc từng nông trại</div>
+          </li>
+          <li>
+            <div class="vd"></div>
+            <div><strong>Bền vững</strong> — Canh tác bảo vệ đất và môi trường</div>
+          </li>
+        </ul>
+      </div>
+      <div class="ablk">
+        <h3>Số liệu ấn tượng</h3>
+        <div class="sg">
+          <div class="sc">
+            <div class="sn">50+</div>
+            <div class="sl">Nông trại hợp tác</div>
+          </div>
+          <div class="sc">
+            <div class="sn">5.000+</div>
+            <div class="sl">Khách hàng tin dùng</div>
+          </div>
+          <div class="sc">
+            <div class="sn">20+</div>
+            <div class="sl">Loại sản phẩm</div>
+          </div>
+          <div class="sc">
+            <div class="sn">6</div>
+            <div class="sl">Năm kinh nghiệm</div>
+          </div>
+        </div>
+      </div>
+      <div class="ablk">
+        <h3>Quy trình canh tác</h3>
+        <p>Mỗi sản phẩm qua kiểm định nghiêm ngặt từ chọn giống, chăm sóc, thu hoạch đến đóng gói. Cam kết đạt chuẩn <strong style="color:var(--g)">VietGAP</strong> và <strong style="color:var(--g)">GlobalGAP</strong>.</p>
+      </div>
+    </div>
+    <div class="bnr">
+      <div>
+        <h2>Sẵn sàng đặt hàng?</h2>
+        <p>Khám phá sản phẩm tươi sạch từ GreenFarm.</p>
+      </div>
+      <button class="btnw" onclick="go('products')">Xem sản phẩm →</button>
+    </div>
+    <footer>© 2025 GreenFarm – Bơ sáp & nông sản sạch</footer>
+  </section>
+
+  <!-- PRODUCTS PAGE -->
+  <section class="page" id="page-products" data-page="products">
+    <div class="ph">
+      <h1>Sản phẩm</h1>
+      <p>Nông sản sạch thu hoạch mỗi ngày — giao tận nơi</p>
+    </div>
+    <div class="pw">
+      <div class="ga">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?q=80&w=600&auto=format&fit=crop" alt="Bơ">
+          <div class="cb2">
+            <span class="tag th">🔥 Bán chạy</span>
+            <div class="cn">Bơ Sáp Đắk Lắk</div>
+            <div class="cd">Bơ dẻo, béo, thơm tự nhiên — đặc sản cao nguyên.</div>
+            <div class="cp2">75.000đ/kg</div>
+            <div class="acts">
+              <input type="number" class="qi" value="1" min="1" id="p1">
+              <button class="ab" onclick="add('Bơ Sáp Đắk Lắk','75.000đ/kg',+p1.value,this,'Đặt nhanh')">Đặt nhanh</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=600&auto=format&fit=crop" alt="Cam">
+          <div class="cb2">
+            <span class="tag to">🌿 Hữu cơ</span>
+            <div class="cn">Cam Hữu Cơ</div>
+            <div class="cd">Trồng tự nhiên, sạch 100% — ngọt thanh, nhiều nước.</div>
+            <div class="cp2">45.000đ/kg</div>
+            <div class="acts">
+              <input type="number" class="qi" value="1" min="1" id="p2">
+              <button class="ab" onclick="add('Cam Hữu Cơ','45.000đ/kg',+p2.value,this,'Đặt nhanh')">Đặt nhanh</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=600&auto=format&fit=crop" alt="Rau">
+          <div class="cb2">
+            <span class="tag to">🌿 Hữu cơ</span>
+            <div class="cn">Rau Sạch Organic</div>
+            <div class="cd">Thu hoạch mỗi ngày — tươi ngon và an toàn.</div>
+            <div class="cp2">25.000đ/bó</div>
+            <div class="acts">
+              <input type="number" class="qi" value="1" min="1" id="p3">
+              <button class="ab" onclick="add('Rau Sạch Organic','25.000đ/bó',+p3.value,this,'Đặt nhanh')">Đặt nhanh</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=600&auto=format&fit=crop" alt="Cà Phê">
+          <div class="cb2">
+            <span class="tag tn">✨ Mới</span>
+            <div class="cn">Cà Phê Robusta</div>
+            <div class="cd">Đặc sản Buôn Ma Thuột — rang mộc, đậm đà.</div>
+            <div class="cp2">120.000đ/kg</div>
+            <div class="acts">
+              <input type="number" class="qi" value="1" min="1" id="p4">
+              <button class="ab" onclick="add('Cà Phê Robusta','120.000đ/kg',+p4.value,this,'Đặt nhanh')">Đặt nhanh</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1587735243615-c03f25aaff15?q=80&w=600&auto=format&fit=crop" alt="Sầu Riêng">
+          <div class="cb2">
+            <span class="tag th">🔥 Bán chạy</span>
+            <div class="cn">Sầu Riêng Ri6</div>
+            <div class="cd">Cơm vàng hạt lép, béo ngậy — mùa mới nhất.</div>
+            <div class="cp2">150.000đ/kg</div>
+            <div class="acts">
+              <input type="number" class="qi" value="1" min="1" id="p5">
+              <button class="ab" onclick="add('Sầu Riêng Ri6','150.000đ/kg',+p5.value,this,'Đặt nhanh')">Đặt nhanh</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=600&auto=format&fit=crop" alt="Khoai">
+          <div class="cb2">
+            <span class="tag to">🌿 Hữu cơ</span>
+            <div class="cn">Khoai Lang Mật</div>
+            <div class="cd">Ngọt tự nhiên, giàu dinh dưỡng.</div>
+            <div class="cp2">30.000đ/kg</div>
+            <div class="acts">
+              <input type="number" class="qi" value="1" min="1" id="p6">
+              <button class="ab" onclick="add('Khoai Lang Mật','30.000đ/kg',+p6.value,this,'Đặt nhanh')">Đặt nhanh</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>© 2025 GreenFarm – Bơ sáp & nông sản sạch</footer>
+  </section>
+
+  <!-- CONTACT PAGE -->
+  <section class="page" id="page-contact" data-page="contact">
+    <div class="ph">
+      <h1>Liên hệ đặt hàng</h1>
+      <p>Tư vấn & nhận đơn từ 6:00 – 20:00 mỗi ngày</p>
+    </div>
+    <div class="cw">
+      <div class="ci2">
+        <h2>Thông tin liên hệ</h2>
+        <p>Gọi trực tiếp hoặc điền form — chúng tôi phản hồi trong 30 phút.</p>
+        <div class="ir">
+          <div class="ii">📞</div>
+          <div>
+            <div class="il">Điện thoại / Zalo</div>
+            <div class="iv">0905 123 456</div>
+          </div>
+        </div>
+        <div class="ir">
+          <div class="ii">📍</div>
+          <div>
+            <div class="il">Địa chỉ</div>
+            <div class="iv">Buôn Ma Thuột, Đắk Lắk</div>
+          </div>
+        </div>
+        <div class="ir">
+          <div class="ii">📘</div>
+          <div>
+            <div class="il">Facebook</div>
+            <div class="iv">fb.com/greenfarm.daklak</div>
+          </div>
+        </div>
+        <div class="ir">
+          <div class="ii">✉️</div>
+          <div>
+            <div class="il">Email</div>
+            <div class="iv">hello@greenfarm.vn</div>
+          </div>
+        </div>
+        <table class="ht">
+          <tr>
+            <td>Thứ 2 – Thứ 6</td>
+            <td>6:00 – 20:00</td>
+          </tr>
+          <tr>
+            <td>Thứ 7</td>
+            <td>6:00 – 18:00</td>
+          </tr>
+          <tr>
+            <td>Chủ nhật</td>
+            <td>7:00 – 17:00</td>
+          </tr>
+        </table>
+      </div>
+      <div class="cfw">
+        <h2>Gửi tin nhắn</h2>
+        <div class="fr">
+          <div class="fg">
+            <label class="fl" for="fn">Họ và tên *</label>
+            <input type="text" class="fi2" id="fn" placeholder="Nguyễn Văn A">
+          </div>
+          <div class="fg">
+            <label class="fl" for="fp">Số điện thoại *</label>
+            <input type="tel" class="fi2" id="fp" placeholder="0905 000 000">
+          </div>
+        </div>
+        <div class="fg">
+          <label class="fl" for="fe">Email</label>
+          <input type="email" class="fi2" id="fe" placeholder="email@example.com">
+        </div>
+        <div class="fg">
+          <label class="fl" for="fa">Địa chỉ giao hàng</label>
+          <input type="text" class="fi2" id="fa" placeholder="Số nhà, đường, quận/huyện...">
+        </div>
+        <div class="fg">
+          <label class="fl" for="fm">Nội dung đặt hàng</label>
+          <textarea class="ft" id="fm" placeholder="Ví dụ: 2kg bơ sáp + 3kg cam, giao sáng thứ 6..."></textarea>
+        </div>
+        <button class="sb" onclick="send()">Gửi thông tin đặt hàng</button>
+        <div class="ok2" id="ok">✓ Cảm ơn! Chúng tôi sẽ gọi xác nhận trong vòng 30 phút.</div>
+      </div>
+    </div>
+    <footer>© 2025 GreenFarm – Bơ sáp & nông sản sạch</footer>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* ===== ABOUT.CSS - KIỂU CHUNG CHO TRANG GIỚI THIỆU ===== */
+
+/* ---------- Khối nội dung giới thiệu ---------- */
+.ab2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ablk {
+  background: #fff;
+  border-bottom: 1px solid #e5e2da;
+  border-right: 1px solid #e5e2da;
+  padding: 1.75rem;
+}
+
+.ablk:nth-child(even) {
+  border-right: none;
+}
+
+.ablk h3 {
+  color: var(--g);
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.ablk p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* ---------- Danh sách giá trị ---------- */
+.vl {
+  list-style: none;
+}
+
+.vl li {
+  align-items: flex-start;
+  border-bottom: 1px solid #f0ede8;
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  padding: 7px 0;
+}
+
+.vl li:last-child {
+  border-bottom: none;
+}
+
+.vd {
+  background: var(--g2);
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 7px;
+  margin-top: 5px;
+  width: 7px;
+}
+
+/* ---------- Lưới số liệu ---------- */
+.sg {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 6px;
+}
+
+.sc {
+  background: #f7f6f2;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.sn {
+  color: var(--g);
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+}
+
+.sl {
+  color: #999;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+/* ---------- Khối banner kêu gọi hành động ---------- */
+.bnr {
+  align-items: center;
+  background: var(--g);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.75rem 2rem;
+}
+
+.bnr h2 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+.bnr p {
+  color: rgba(255, 255, 255, .7);
+  font-size: 13px;
+  margin-top: 4px;
+}

@@ -1,0 +1,168 @@
+/* ===== CONTACT.CSS - KIỂU CHUNG CHO TRANG LIÊN HỆ ===== */
+
+/* ---------- Khung chứa liên hệ ---------- */
+.cw {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  min-height: 480px;
+}
+
+/* ---------- Phần thông tin liên hệ ---------- */
+.ci2 {
+  background: var(--g);
+  padding: 2rem 1.5rem;
+}
+
+.ci2 h2 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.ci2 > p {
+  color: rgba(255, 255, 255, .7);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Dòng thông tin nhỏ ---------- */
+.ir {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.ii {
+  align-items: center;
+  background: rgba(255, 255, 255, .14);
+  border-radius: 7px;
+  display: grid;
+  font-size: 16px;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.il {
+  color: rgba(255, 255, 255, .5);
+  font-size: 11px;
+  margin-bottom: 1px;
+}
+
+.iv {
+  color: #fff;
+  font-size: 13px;
+}
+
+/* ---------- Bảng thông tin ---------- */
+.ht {
+  margin-top: 1.2rem;
+  width: 100%;
+}
+
+.ht td {
+  font-size: 12px;
+  padding: 4px 0;
+}
+
+.ht td:first-child {
+  color: rgba(255, 255, 255, .55);
+}
+
+.ht td:last-child {
+  color: #fff;
+  text-align: right;
+}
+
+/* ---------- Form liên hệ ---------- */
+.cfw {
+  background: #fff;
+  padding: 2rem 1.5rem;
+}
+
+.cfw h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 1.2rem;
+}
+
+.fr {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.fg {
+  margin-bottom: 12px;
+}
+
+.fl {
+  color: #999;
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* ---------- Form Inputs ---------- */
+.fi2, .ft {
+  background: #fafaf8;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  color: #1a1a1a;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 8px 11px;
+  transition: .15s;
+  width: 100%;
+}
+
+.fi2 {
+  height: 36px;
+}
+
+.ft {
+  height: 100px;
+  resize: none;
+}
+
+.fi2:focus, .ft:focus {
+  border-color: var(--g2);
+  box-shadow: 0 0 0 2px rgba(99, 153, 34, .1);
+  outline: none;
+}
+
+/* ---------- Submit Button ---------- */
+.sb {
+  background: var(--g);
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  height: 42px;
+  margin-top: 2px;
+  width: 100%;
+}
+
+.sb:hover {
+  background: var(--g4);
+}
+
+/* ---------- Success Message ---------- */
+.ok2 {
+  background: var(--g3);
+  border: 1px solid #bdd894;
+  border-radius: 7px;
+  color: var(--g);
+  display: none;
+  font-size: 12px;
+  margin-top: 8px;
+  padding: 9px 12px;
+  text-align: center;
+}

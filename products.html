@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenFarm – Sản phẩm</title>
+<!-- # PAGE: products.html - Trang danh sách sản phẩm và mua hàng -->
+<!-- Liên kết font chữ và stylesheet cho trang sản phẩm -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+<!-- Thân trang chứa header, nội dung chính và footer -->
+<header style="position:relative">
+  <div class="logo"><a href="home.html" class="logo-link"><span>🌿</span>GreenFarm</a></div>
+  <nav> <!-- # NAV: menu điều hướng sang các trang khác -->
+    <a class="nb" href="home.html">Trang chủ</a>
+    <a class="nb" href="about.html">Giới thiệu</a>
+    <a class="nb on" href="products.html">Sản phẩm</a>
+    <a class="nb" href="contact.html">Liên hệ</a>
+    <button class="cb" id="ct">🛒 Giỏ hàng <span class="badge" id="cc">0</span></button>
+  </nav>
+  <div class="cp" id="cpanel">
+    <div class="cp-head">Giỏ hàng của bạn</div>
+    <div id="citems"><div class="ce">Giỏ hàng trống</div></div>
+    <div class="cf"><span id="ctot" style="font-size:12px;color:#999">0 sản phẩm</span><button class="clr" id="clrbtn">Xóa tất cả</button></div>
+  </div>
+</header>
+<div class="toast" id="toast"></div>
+<!-- # MAIN CONTENT: danh sách sản phẩm, thẻ giá và hành động đặt nhanh -->
+
+<!-- START PAGE: products -->
+<div class="page" id="page-products" data-page="products">
+  <div class="ph"><h1>Sản phẩm</h1><p>Nông sản sạch thu hoạch mỗi ngày — giao tận nơi</p></div>
+  <div class="pw"><div class="ga">
+    <div class="card"><img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?q=80&w=600&auto=format&fit=crop" alt="Bơ"><div class="cb2"><span class="tag th">🔥 Bán chạy</span><div class="cn">Bơ Sáp Đắk Lắk</div><div class="cd">Bơ dẻo, béo, thơm tự nhiên — đặc sản cao nguyên.</div><div class="cp2">75.000đ/kg</div><div class="acts"><input type="number" class="qi" value="1" min="1" id="p1"><button class="ab" onclick="add('Bơ Sáp Đắk Lắk','75.000đ/kg',+p1.value,this,'Đặt nhanh')">Đặt nhanh</button></div></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=600&auto=format&fit=crop" alt="Cam"><div class="cb2"><span class="tag to">🌿 Hữu cơ</span><div class="cn">Cam Hữu Cơ</div><div class="cd">Trồng tự nhiên, sạch 100% — ngọt thanh, nhiều nước.</div><div class="cp2">45.000đ/kg</div><div class="acts"><input type="number" class="qi" value="1" min="1" id="p2"><button class="ab" onclick="add('Cam Hữu Cơ','45.000đ/kg',+p2.value,this,'Đặt nhanh')">Đặt nhanh</button></div></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?q=80&w=600&auto=format&fit=crop" alt="Rau"><div class="cb2"><span class="tag to">🌿 Hữu cơ</span><div class="cn">Rau Sạch Organic</div><div class="cd">Thu hoạch mỗi ngày — tươi ngon và an toàn.</div><div class="cp2">25.000đ/bó</div><div class="acts"><input type="number" class="qi" value="1" min="1" id="p3"><button class="ab" onclick="add('Rau Sạch Organic','25.000đ/bó',+p3.value,this,'Đặt nhanh')">Đặt nhanh</button></div></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=600&auto=format&fit=crop" alt="Cà Phê"><div class="cb2"><span class="tag tn">✨ Mới</span><div class="cn">Cà Phê Robusta</div><div class="cd">Đặc sản Buôn Ma Thuột — rang mộc, đậm đà.</div><div class="cp2">120.000đ/kg</div><div class="acts"><input type="number" class="qi" value="1" min="1" id="p4"><button class="ab" onclick="add('Cà Phê Robusta','120.000đ/kg',+p4.value,this,'Đặt nhanh')">Đặt nhanh</button></div></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1587735243615-c03f25aaff15?q=80&w=600&auto=format&fit=crop" alt="Sầu Riêng"><div class="cb2"><span class="tag th">🔥 Bán chạy</span><div class="cn">Sầu Riêng Ri6</div><div class="cd">Cơm vàng hạt lép, béo ngậy — mùa mới nhất.</div><div class="cp2">150.000đ/kg</div><div class="acts"><input type="number" class="qi" value="1" min="1" id="p5"><button class="ab" onclick="add('Sầu Riêng Ri6','150.000đ/kg',+p5.value,this,'Đặt nhanh')">Đặt nhanh</button></div></div></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1571575173700-afb9492e6a50?q=80&w=600&auto=format&fit=crop" alt="Khoai"><div class="cb2"><span class="tag to">🌿 Hữu cơ</span><div class="cn">Khoai Lang Mật</div><div class="cd">Ngọt tự nhiên, giàu dinh dưỡng.</div><div class="cp2">30.000đ/kg</div><div class="acts"><input type="number" class="qi" value="1" min="1" id="p6"><button class="ab" onclick="add('Khoai Lang Mật','30.000đ/kg',+p6.value,this,'Đặt nhanh')">Đặt nhanh</button></div></div></div>
+  </div></div>
+  <!-- # FOOTER: thông tin bản quyền và kết thúc trang -->
+  <footer>© 2025 GreenFarm – Bơ sáp & nông sản sạch</footer>
+</div>
+<!-- END PAGE: products -->
+
+<script src="js/main.js"></script>
+</body>
+</html>

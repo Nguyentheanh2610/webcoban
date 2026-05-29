@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenFarm – Liên hệ</title>
+<!-- # PAGE: contact.html - Trang liên hệ và gửi thông tin đặt hàng -->
+<!-- Liên kết font chữ và stylesheet cho trang liên hệ -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+<!-- Thân trang chứa header, nội dung chính và footer -->
+<header style="position:relative">
+  <div class="logo"><a href="home.html" class="logo-link"><span>🌿</span>GreenFarm</a></div>
+  <nav> <!-- # NAV: menu điều hướng sang các trang khác -->
+    <a class="nb" href="home.html">Trang chủ</a>
+    <a class="nb" href="about.html">Giới thiệu</a>
+    <a class="nb" href="products.html">Sản phẩm</a>
+    <a class="nb on" href="contact.html">Liên hệ</a>
+    <button class="cb" id="ct">🛒 Giỏ hàng <span class="badge" id="cc">0</span></button>
+  </nav>
+  <div class="cp" id="cpanel">
+    <div class="cp-head">Giỏ hàng của bạn</div>
+    <div id="citems"><div class="ce">Giỏ hàng trống</div></div>
+    <div class="cf"><span id="ctot" style="font-size:12px;color:#999">0 sản phẩm</span><button class="clr" id="clrbtn">Xóa tất cả</button></div>
+  </div>
+</header>
+<div class="toast" id="toast"></div>
+<!-- # MAIN CONTENT: form liên hệ, thông tin liên lạc và gửi đơn đặt hàng -->
+
+<!-- START PAGE: contact -->
+<div class="page" id="page-contact" data-page="contact">
+  <div class="ph"><h1>Liên hệ đặt hàng</h1><p>Tư vấn & nhận đơn từ 6:00 – 20:00 mỗi ngày</p></div>
+  <div class="cw">
+    <div class="ci2">
+      <h2>Thông tin liên hệ</h2>
+      <p>Gọi trực tiếp hoặc điền form — chúng tôi phản hồi trong 30 phút.</p>
+      <div class="ir">
+        <div class="ii">📞</div>
+        <div>
+          <div class="il">Điện thoại / Zalo</div>
+          <div class="iv">0905 123 456</div>
+        </div>
+      </div>
+      <div class="ir">
+        <div class="ii">📍</div>
+        <div>
+          <div class="il">Địa chỉ</div>
+          <div class="iv">Buôn Ma Thuột, Đắk Lắk</div>
+        </div>
+      </div>
+      <div class="ir">
+        <div class="ii">📘</div>
+        <div>
+          <div class="il">Facebook</div>
+          <div class="iv">fb.com/greenfarm.daklak</div>
+        </div>
+      </div>
+      <div class="ir">
+        <div class="ii">✉️</div>
+        <div>
+          <div class="il">Email</div>
+          <div class="iv">hello@greenfarm.vn</div>
+        </div>
+      </div>
+      <table class="ht">
+        <tr>
+          <td>Thứ 2 – Thứ 6</td>
+          <td>6:00 – 20:00</td>
+        </tr>
+        <tr>
+          <td>Thứ 7</td>
+          <td>6:00 – 18:00</td>
+        </tr>
+        <tr>
+          <td>Chủ nhật</td>
+          <td>7:00 – 17:00</td>
+        </tr>
+      </table>
+    </div>
+    <div class="cfw">
+      <h2>Gửi tin nhắn</h2>
+      <div class="fr">
+        <div class="fg">
+          <label class="fl">Họ và tên *</label>
+          <input type="text" class="fi2" id="fn" placeholder="Nguyễn Văn A">
+        </div>
+        <div class="fg">
+          <label class="fl">Số điện thoại *</label>
+          <input type="tel" class="fi2" id="fp" placeholder="0905 000 000">
+        </div>
+      </div>
+      <div class="fg">
+        <label class="fl">Email</label>
+        <input type="email" class="fi2" id="fe" placeholder="email@example.com">
+      </div>
+      <div class="fg">
+        <label class="fl">Địa chỉ giao hàng</label>
+        <input type="text" class="fi2" id="fa" placeholder="Số nhà, đường, quận/huyện...">
+      </div>
+      <div class="fg">
+        <label class="fl">Nội dung đặt hàng</label>
+        <textarea class="ft" id="fm" placeholder="Ví dụ: 2kg bơ sáp + 3kg cam, giao sáng thứ 6..."></textarea>
+      </div>
+      <button class="sb" onclick="send()">Gửi thông tin đặt hàng</button>
+      <div class="ok2" id="ok">✓ Cảm ơn! Chúng tôi sẽ gọi xác nhận trong vòng 30 phút.</div>
+    </div>
+  </div>
+  <!-- # FOOTER: thông tin bản quyền và kết thúc trang -->
+  <footer>© 2025 GreenFarm – Bơ sáp & nông sản sạch</footer>
+</div>
+<!-- END PAGE: contact -->
+
+<script src="js/main.js"></script>
+</body>
+</html>

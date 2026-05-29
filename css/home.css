@@ -1,0 +1,171 @@
+/* ===== HOME.CSS - KIỂU CHUNG CHO TRANG CHỦ ===== */
+
+/* ---------- Phần tiêu đề chính ---------- */
+.hero {
+  align-items: center;
+  background: linear-gradient(135deg, #2a5218, var(--g) 55%, var(--g2));
+  display: flex;
+  min-height: 380px;
+  overflow: hidden;
+  padding: 0 2.5rem;
+  position: relative;
+}
+
+.hero::after {
+  background: rgba(255, 255, 255, .04);
+  border-radius: 50%;
+  content: '';
+  height: 360px;
+  position: absolute;
+  right: -40px;
+  top: -60px;
+  width: 360px;
+}
+
+.hc {
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+
+.hc h1 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hc p {
+  color: rgba(255, 255, 255, .78);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hcta {
+  background: #fff;
+  border: none;
+  border-radius: 7px;
+  color: var(--g);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 24px;
+}
+
+.hcta:hover {
+  background: var(--g3);
+}
+
+.hero-link {
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
+/* ---------- Phần tính năng nổi bật ---------- */
+.feats {
+  background: #fff;
+  border-bottom: 1px solid #e5e2da;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.feat {
+  align-items: flex-start;
+  border-right: 1px solid #e5e2da;
+  display: flex;
+  gap: 12px;
+  padding: 1.2rem 1.5rem;
+}
+
+.feat:last-child {
+  border-right: none;
+}
+
+.fi {
+  align-items: center;
+  background: var(--g3);
+  border-radius: 8px;
+  display: grid;
+  font-size: 18px;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+
+.feat h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.feat p {
+  color: #888;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ---------- Phần giới thiệu sản phẩm nổi bật ---------- */
+.prev {
+  background: #f7f6f2;
+  padding: 2.5rem 1.5rem;
+}
+
+.prev-hd {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.sa {
+  background: none;
+  border: 1px solid #bdd894;
+  border-radius: 7px;
+  color: var(--g);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 12px;
+}
+
+.sa:hover {
+  background: var(--g3);
+}
+
+.g3 {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---------- Phần ảnh minh họa ---------- */
+.snap {
+  background: #fff;
+  border-top: 1px solid #e5e2da;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.snap img {
+  display: block;
+  height: 260px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.snp {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.snp p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
